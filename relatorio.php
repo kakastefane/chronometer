@@ -77,7 +77,7 @@
 
     date_default_timezone_set('America/Sao_Paulo');
 
-    $con = mysqli_connect("localhost","root","","cronometro");
+    $con = mysqli_connect("localhost","kaka_cronometro","xPHRObifOH","kaka_cronometro");
 
     // Check connection
     if (mysqli_connect_errno())
@@ -101,7 +101,7 @@
     		$clausula = 'AND';
     	}
 
-	    if(strlen($palavrachave) > 3){
+	    if(strlen($palavrachave) >= 3){
 	    	$where = 1;
 	    	$sql .= " $clausula nome LIKE '%$palavrachave%'";
 	    }
@@ -115,7 +115,15 @@
 	    if($mes > 0 && $ano > 0){
 	    	$ultimodia = date('t',mktime(0,0,0,$mes,1,date('Y')));
 	    	$where = 1;
-	    	$sql .= " $clausula inicial >= '01-".$mes."-".$ano."' $clausula inicial <= '".$ultimodia."-".$mes."-".$ano."' ";
+	    	$sql .= " $clausula inicial >= '".$ano."-".$mes."-01 00:00:00'";
+
+	    	if($where == 0){
+	    		$clausula = 'WHERE';
+	    	}else {
+	    		$clausula = 'AND';
+	    	}
+
+	    	$sql .= " $clausula inicial <= '".$ano."-".$mes."-".$ultimodia." 23:59:59' ";
 	    }
 
 	}

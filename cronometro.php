@@ -1,7 +1,7 @@
 <?php
     date_default_timezone_set('America/Sao_Paulo');
 
-    $con = mysqli_connect("localhost","root","","cronometro");
+    $con = mysqli_connect("localhost","kaka_cronometro","xPHRObifOH","kaka_cronometro");
 
     // Check connection
     if (mysqli_connect_errno())
