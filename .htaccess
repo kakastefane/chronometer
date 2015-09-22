@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Password Protected Area"
+AuthUserFile /home/kaka/web/kakastefane.com.br/public_html/cronometro/.htpasswd
+Require valid-user
