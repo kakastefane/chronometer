@@ -13,10 +13,13 @@
 
 		<link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,300' rel='stylesheet' type='text/css'>
 		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/jquery.countdown.css" rel="stylesheet">
 		<link href="css/styles.css" rel="stylesheet">
 
 		<script src="js/jquery-2.1.4.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
+		<script src="js/jquery.plugin.min.js"></script>
+		<script src="js/jquery.countdown.min.js"></script>
 		<script src="js/funcoes.js"></script>
 
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -32,8 +35,8 @@
 			<div class="header clearfix">
 				<nav>
 					<ul class="nav nav-pills pull-right">
-						<li role="presentation" class="active"><a href="index.html">Cronometro</a></li>
-						<li role="presentation"><a href="relatorio.html">Relatório</a></li>
+						<li role="presentation" class="active"><a href="index.php">Cronometro</a></li>
+						<li role="presentation"><a href="relatorio.php">Relatório</a></li>
 					</ul>
 				</nav>
 				<h3 class="text-muted">Chronometer</h3>
@@ -42,33 +45,15 @@
 			<div class="jumbotron">
 				<h1>Cronômetro</h1>
 				<p class="lead">Ao iniciar ou parar um job lembre-se de iniciar ou parar o cronômetro!</p>
-				<button type="button" class="btn btn-labeled btn-success"><span class="btn-label"><i class="glyphicon glyphicon-play"></i></span>Iniciar</button>
-		        <button type="button" class="btn btn-labeled btn-danger"><span class="btn-label"><i class="glyphicon glyphicon-stop"></i></span>Parar</button>
+
+				<div id="cronometro"></div>
+
+				<input class="form-control" type="text" name="jobName" placeholder="Nome do Job">
+				<button id="play" type="button" class="btn btn-labeled btn-success"><span class="btn-label"><i class="glyphicon glyphicon-play"></i></span>Iniciar</button>
+		        <button id="stop" type="button" class="btn btn-labeled btn-danger"><span class="btn-label"><i class="glyphicon glyphicon-stop"></i></span>Parar</button>
+
+
 			</div>
-
-			<!-- <div class="row marketing">
-				<div class="col-lg-6">
-					<h4>Subheading</h4>
-					<p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-
-					<h4>Subheading</h4>
-					<p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
-
-					<h4>Subheading</h4>
-					<p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-				</div>
-
-				<div class="col-lg-6">
-					<h4>Subheading</h4>
-					<p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-
-					<h4>Subheading</h4>
-					<p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
-
-					<h4>Subheading</h4>
-					<p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-				</div>
-			</div> -->
 
 			<footer class="footer">
 				<p class="text-center">Desenvolvido por <a href="mailto:gabriel_chagas@live.com" target="_blank">Gabriel Chagas</a> e <a href="mailto:falecom@kakastefane.com.br">Kaká Stefane</a></p>

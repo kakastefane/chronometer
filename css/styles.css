@@ -53,6 +53,11 @@ body {
   margin: 0 5% 10px 5%;
 }
 
+.jumbotron input {
+  width: 90%;
+  margin: 0 5% 10px 5%;
+}
+
 /* Supporting marketing content */
 .marketing {
   margin: 40px 0;
